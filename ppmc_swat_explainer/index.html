@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPMC Khyber Pakhtunkhwa - Upper Swat Water Scheme Explainer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="logo-badge">P&amp;D KP</div>
+      <div class="brand-text">
+        <h1>Public Project Management Cycle (PPMC)</h1>
+        <p>Walkthrough of Manual for Development Projects Khyber Pakhtunkhwa (2022)</p>
+      </div>
+    </div>
+    <div class="header-status">
+      <span class="badge-kp">Upper Swat Scheme (Rs. 1.2 Billion)</span>
+    </div>
+  </header>
+
+  <!-- Main Dual-Pane Layout -->
+  <main class="main-layout">
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">9 Chapters of PPMC</div>
+      <ul class="chapter-list" id="chapterList">
+        <!-- Rendered dynamically via app.js -->
+      </ul>
+    </aside>
+
+    <!-- Main Animation Stage -->
+    <section class="stage-container">
+      <div class="stage-top-bar">
+        <div class="scene-title-group">
+          <h2 id="sceneTitle">Loading Project...</h2>
+          <p id="sceneSubtitle">Please wait</p>
+        </div>
+        <div class="scene-pills">
+          <span class="scene-pill" id="currentPill">Chapter 0 of 9</span>
+        </div>
+      </div>
+
+      <div class="stage-canvas">
+        <div class="animation-view" id="animationView">
+          <svg id="stageSvg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Animated SVG Scene rendered dynamically -->
+          </svg>
+
+          <!-- Floating Subtitles / Captions -->
+          <div class="captions-overlay" id="captionsOverlay">
+            <div class="caption-text" id="captionText">
+              Initializing audio narration and animated scenes...
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Player & Controls Bar -->
+  <footer class="controls-footer">
+    <!-- Scrubbing Progress Bar -->
+    <div class="progress-track-wrapper">
+      <span class="time-display" id="currentTime">00:00</span>
+      <div class="progress-bar-container" id="progressContainer">
+        <div class="progress-bar-fill" id="progressBarFill">
+          <div class="progress-handle"></div>
+        </div>
+      </div>
+      <span class="time-display" id="totalTime">00:00</span>
+    </div>
+
+    <!-- Controls Row -->
+    <div class="controls-row">
+      <div class="playback-buttons">
+        <button class="chapter-nav-btn" id="prevBtn">⏮ Prev Chapter</button>
+        <button class="ctrl-btn play-btn" id="playBtn" title="Play / Pause">▶</button>
+        <button class="chapter-nav-btn" id="nextBtn">Next Chapter ⏭</button>
+      </div>
+
+      <div class="playback-options">
+        <select class="speed-select" id="speedSelect" title="Playback Speed">
+          <option value="0.75">0.75x Speed</option>
+          <option value="1.0" selected>1.0x Normal</option>
+          <option value="1.25">1.25x Speed</option>
+          <option value="1.5">1.5x Fast</option>
+        </select>
+
+        <button class="toggle-btn active" id="audioToggle">
+          🔊 Narration: ON
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
